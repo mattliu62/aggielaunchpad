@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@astrajs/rest": "^0.0.9"
+  }
+}
