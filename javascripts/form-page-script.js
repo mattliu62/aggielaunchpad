@@ -1,10 +1,10 @@
-function getParameterByName(name, url = window.location.href) {
-	name = name.replace(/[\[\]]/g, '\\$&');
-	var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$'),
-		results = regex.exec(url);
-	if (!results) return null;
-	if (!results[2]) return '';
-	return decodeURIComponent(results[2].replace(/\+/g, ' '));
-}
+const sql = require("sqlite3").verbose();
 
-var x = document.getElementById();
+console.log('hello');
+
+const mainDB = new sql.Database('aggielaunchpad.db');
+
+let cmd = " SELECT name FROM sqlite_master WHERE type='table' AND name='AggieLaunchPadTable' ";
+mainDB.get(cmd, function (err, val) {
+	console.log(err, val);
+});

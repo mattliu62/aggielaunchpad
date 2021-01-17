@@ -2,87 +2,87 @@
 <html>
 
 <head>
-    Aggie Launchpad
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.1.2/dist/index.min.js"></script>
+    <title>Aggie LaunchPad</title>
 </head>
 
 <body>
-    Hello world.
-    <div id="main_form">
-
-        <!-- name -->
-	<div id="name_entry">
-	    <form>
-                <label for="yourname">Your name:</label><br>
-                <input type="text" id="yourname" name="yourname"><br>
-            </form>
-	</div>
-  
-        <!-- organization -->
-	<div id="np_org_entry">
-	    <form>
-        	<label for="organization">Nonprofit name:</label><br>
-        	<input type="text" id="organization" name="organization"><br>
-            <form>
-	</div>
-
-	<div id="com_org_entry">
-	    <form>
-		<label for="organization">Company name:</label><br>
-        	<input type="text" id="organization" name="organization"><br>
-	    </form>
-	</div>
-
-	<div id="uni_org_entry">
-	    <form>
-        	<label for="organization">University name:</label><br>
-        	<input type="text" id="organization" name="organization"><br>
-	    </form>	
-	</div>
-
-        <!-- email -->
-	<div id="email_entry">
-	    <form>
-        	<label for="email">Your email:</label><br>
-        	<input type="email" id="email" name="email"><br>
-            <form>
-	</div>
-
-        <!-- password -->
-	<div id="password_entry">
-            <form>
-        	<label for="password">Password:</label><br>
-        	<input type="password" id="password" name="password"><br>
-            </form>
-	</div>
-
-        <!-- description -->
-	<div id="np_description">
-	    <form>
-                <label for="np_description">As a nonprofit, describe your organization and area of advocacy.
-Also describe what technologies and products you are interested in integrating into your organization
- and what kinds of students you are interested in working with:</label><br>
-                <input type="textarea" id="np_description" name="np_description"><br>
-	    </form>
-	</div>
-
-        <label for="com_description">As a company, describe your organization and area of expertise.
-Also describe what areas of advocacy you are interesting in helping technologies and products you are interested in providing to nonprofits
- and what kind of students you are interesting in working with:</label><br>
-        <input type="textarea" id="com_description" name="com_description"><br>
-
-	<label for="stu_description">As a student, describe your character and your area of study.
-Also describe what areas of advocacy you are interested in helping and what technologies and products you are interested in working on:</label><br>
-	<input type="textarea" id="stu_description" name="stu_description"><br>
-
-        <!-- website -->
-        <label for="website">Your website:</label><br>
-        <input type="url" id="website" name="website"><br>
-
-        <input type="submit" value="Submit">
-    </form>
+	<div id="main_form">
+ <form method="post" action="">
+    <!-- dropdown -->
+    <div id="form_type_div" style="display: block">
+        <label for="form_type_entry">Are you a student, nonprofit, or company?</label><br>
+        <select id="form_type_entry" name="form_type_entry">
+        <option value="Student">Student</option>
+        <option value="Nonprofit">Nonprofit</option>
+        <option value="Company">Company</option>
+        </select>
+        <button type="button" id="submit_type_button" value="Next">Next</button>
     </div>
+    
+		<!-- name -->
+		<div id="name_entry" style="display: none">
+				<label for="yourname">What is your name?</label><br>
+				<input type="text" id="yourname" name="yourname">
+				<button type="button" id="submit_name_button" value="Next">Next</button>
+		</div>
+
+		<!-- organization -->
+				<label for="organization" id="np_org_entry" style="display: none">What is the name of your nonprofit?</label>
+				<label for="organization" id="com_org_entry" style="display: none">What is the name of your company?</label>
+				<label for="organization" id="uni_org_entry" style="display: none">What is the name of your university?</label>
+    <div id="org_entry" style="display: none">
+				<input type="text" id="organization" name="organization">
+				<button type="button" id="submit_org_button" value="Next">Next</button>
+    </div>
+
+		<!-- email -->
+		<div id="email_entry" style="display: none">
+				<label for="email">What is your email?</label><br>
+				<input type="email" id="email" name="email">
+				<button type="button" id="submit_email_button" value="Next">Next</button>
+		</div>
+
+		<!-- password -->
+		<div id="password_entry" style="display: none">
+				<label for="password">What will your password be?</label><br>
+				<input type="password" id="password" name="password">
+				<button type="button" id="submit_password_button" value="Next">Next</button>
+		</div>
+
+		<!-- description -->
+				<label for="description" id="np_desc_entry" style="display: none">As a nonprofit, describe your organization and area of advocacy.
+					Also describe what technologies and products you are interested in integrating into your
+					organization and what kinds of students you are interested in working with.</label>
+				<label for="com_description" id="com_desc_entry" style="display: none">As a company, describe your organization and area of expertise.
+					Also describe what areas of advocacy you are interested in helping, what technologies and products you
+					are interested in providing, and what kind of students you are interesting in working with.</label>
+				<label for="stu_description" id="stu_desc_entry" style="display: none">As a student, describe yourself and your area of study.
+					Also describe what areas of advocacy you are interested in helping and what technologies and
+					products you are interested in working on.</label>
+     <div id="desc_entry" style="display: none">
+				<input type="textarea" id="stu_description" name="stu_description">
+				<button type="button" id="submit_desc_button" value="Next">Next</button>
+    </div>
+
+		<!-- website -->
+		<div id="website_entry" style="display: none">
+				<label for="website">What is your website?</label><br>
+				<input type="url" id="website" name="website">
+				<button type="button" id="submit_website_button" value="Next">Next</button>
+		</div>
+    
+    <div id="submit_form_div" style="display: none">
+    <label for="submit_form_button">Thank you! Your registration is complete.</label><br>
+		<button type="button" id="submit_form_button" value="Submit">Find Matches</button>
+    </div>
+   
+   </form>
+	</div>
 </body>
 
-<script src="../javascripts/form-page-script.js"></script>
+<script src="form.js"></script>
 
 </html>

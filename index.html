@@ -2,29 +2,120 @@
 <html>
 
 <head>
-    Aggie Launchpad
+<title>Aggie LaunchPad</title>
+<style>
+body {
+	background-image: url("images/1.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+}
+@font-face {
+	font-family: ProximaNova-Black;
+	src: url("fonts/ProximaNova-Black.ttf");
+}
+@font-face {
+	font-family: ProximaNova-Light;
+	src: url("fonts/ProximaNova-Light.ttf");
+}
+h1 {
+	font-family: ProximaNova-Black;
+	font-size: 130px;
+	color: white;
+	position:absolute;
+	top: 35px;
+	left: 80px;
+}
+#parent {
+
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+p {
+
+	position: relative;
+        font-family: ProximaNova-Light;
+        font-size: 120%;
+        color:white;
+	left: 140px;
+	top: 480px;
+}
+button {
+	font-family:ProximaNova-Black;
+	background-color: #037d52;
+	border: none;
+	border-radius: 40px;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 25px;
+	margin: 4px 2px;
+
+}
+
+
+#buttons {
+	width: 50%;
+
+	position: relative;
+	top: 450px;
+	left: 350px;
+}
+</style>
+
 </head>
 
 <body>
-    Hello world.
+<div id = "parent">
+<h1>AGGIE<br/>LAUNCHPAD</h1>
+	<div id = "buttons">
+	<a href="launch/index.html"><button class="button liftoff_button" type="submit">LIFTOFF!</button></a>
+	<!--<button class="button company_button" type="submit">I'M A NON-PROFIT</button>--!>
+	<!--<button class="button student_button" type="submit">I'M A COMPANY</button>--!>
+	</div>
+<p>A web platform that connects nonprofits, companies, and students.</p>
 
-    <form action="launch">
-	<input type="hidden" name="user" value="nonprofit">
-        <button type="submit" value="I'm a nonprofit!<" />
-    </form>
-
-    <form action="launch">
-	<input type="hidden" name="user" value="company">
-        <button type="submit" value="I'm a company!<" />
-    </form>
-
-    <form action="launch">
-	<input type="hidden" name="user" value="student">
-        <button type="submit" value="I'm a student!<" />
-    </form>
+</div>
 </body>
 
 <script src="javascripts/backend.js"></script>
+<script src="javascripts/myFirstJS.js"></script>
 
 </html>
 
