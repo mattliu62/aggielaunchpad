@@ -2,16 +2,77 @@
 <html>
 
 <head>
+<style>
+body {
+        background-image: url("../images/8_5.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+}
+@font-face {
+        font-family: ProximaNova-Black;
+        src: url("../fonts/ProximaNova-Black.ttf");
+}
+@font-face {
+        font-family: ProximaNova-Light;
+        src: url("../fonts/ProximaNova-Light.ttf");
+}
+h1 {
+        font-family: ProximaNova-Black;
+        font-size: 130px;
+        color: white;
+        position:absolute;
+        top: 15px;
+        left: 500px;
+}
+h3 {
+	font-family: ProximaNova-Black;
+	font-size: 25px;
+	color: white;
+}
+
+p {
+	font-family:ProximaNova-Light;
+	font-size: 20px;
+	color: white;
+}
+
+.matches {
+	position: relative;
+	top: 300px;
+	left: 80px;
+}
+</style>
   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/universal-sentence-encoder"></script>
     <script src="https://cdn.jsdelivr.net/npm/danfojs@0.1.2/dist/index.min.js"></script>
+    <script src="matching.js"></script>
     <title>Aggie LaunchPad</title>
 </head>
 
 <body>
-  Hello there.
+	<h1>
+	YOUR MATCHES
+	</h1>
+	<div class = "matches">
+   
+   <h3>Match 1</h3>
+	<p>Company - James Williams - GoGoTech - jwilliams@gogotech.net - www.gogotech.net</p>
+ <p>Nonprofit - Samantha Brown - InnoSolutions - smbrown@inos.com - www.inos.com</p>
+ 	<p>Student - Maurice Smith - UC Davis - mkysmith@ucdavis.edu - www.github.com/maurSmith</p>
+ 
+   <h3>Match 2</h3>
+	<p>Nonprofit - Gabriel Lee - Feeding Right - gabe@feedright.org - www.feedright.org</p>
+	<p>Student - Kiley Wong - NYU - ksunwong@nyu.edu - www.linkedin.com/ert321-6kr5</p>
+	<p>Student - Caroline Rhodes - San Jose State University - www.linkedin.com/ye89lz-43jt</p>
+ 
+   <h3 id="match_section"></h3>
+   <p id="match_content"></p>
+   </div>
 </body>
-
-<script src="matching.js"></script>
 
 </html>

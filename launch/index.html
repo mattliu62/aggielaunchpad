@@ -6,6 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/danfojs@0.1.2/dist/index.min.js"></script>
     <title>Aggie LaunchPad</title>
+	<style>
+	body {
+		background-image: url("../images/1.jpg");
+        	background-repeat: no-repeat;
+        	background-attachment: fixed;
+        	background-size: cover;
+        	background-position: center;
+        	height: 100%; 
+        } 
+	@font-face {
+        	font-family: ProximaNova-Black;
+        	src: url("../fonts/ProximaNova-Black.ttf");
+	}
+	@font-face {
+        	font-family: ProximaNova-Light;
+        	src: url("../fonts/ProximaNova-Light.ttf");
+	}
+	#main_form {
+		font-family: ProximaNova-Black;
+		color:white;
+		font-size: 50px;
+		top: 250px;
+		position: relative;
+		left: 80px;
+		right: 80px;
+	}
+	button {
+		font-family:ProximaNova-Black;
+        	background-color: #037d52;
+        	border: none;
+        	border-radius: 40px;
+        	color: white;
+        	padding: 20px;
+        	text-align: center;
+        	text-decoration: none;
+        	font-size: 20px;
+        	margin: 4px 2px;
+		
+	}
+	button {
+        transition-duration: 0.4s;
+	}	
+
+	button:hover {
+        color: #037d52;
+        background-color: white;
+	}
+
+
+	select {
+		font-family: ProximaNova-Light;
+		font-size: 25px;
+	}
+	input {
+		font-family: ProximaNova-Light
+		height: 200px;
+		font-size: 25px;
+	}
+	#stu_description; {
+		height: 200px;
+		width: 500px;
+		font-size: 500px;
+	}
+
+	</style>
 </head>
 
 <body>
@@ -47,7 +112,7 @@
 
 		<!-- password -->
 		<div id="password_entry" style="display: none">
-				<label for="password">What will your password be?</label><br>
+				<label for="password">Choose a password:</label><br>
 				<input type="password" id="password" name="password">
 				<button type="button" id="submit_password_button" value="Next">Next</button>
 		</div>
@@ -76,7 +141,7 @@
     
     <div id="submit_form_div" style="display: none">
     <label for="submit_form_button">Thank you! Your registration is complete.</label><br>
-		<button type="button" id="submit_form_button" value="Submit">Find Matches</button>
+		<a href="../match/index.html"><button type="button" id="submit_form_button" value="Submit">Find Matches</button></a>
     </div>
    
    </form>
