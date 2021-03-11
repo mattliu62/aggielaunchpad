@@ -166,14 +166,14 @@ string mConvert(string line) //CONVERTS ASSEMBLY TO MACHINE CODE
             }
             else
             {
-                try
-                {
-                    rBit = b16Convert(chunk2);
-                }
-                catch (int e)
+                if (std::any_of(std::begin(chunk2), std::end(chunk2), ::isalpha))
                 {
                     cout << "ASSEMBLER ERROR: undefined label." <<endl;
                     exit(0);
+                }
+                else
+                {
+                    rBit = b16Convert(chunk2);
                 }
             }
             while (rBit.size() < 3)
@@ -202,14 +202,14 @@ string mConvert(string line) //CONVERTS ASSEMBLY TO MACHINE CODE
         }
         else
         {
-                try
-                {
-                    rBit = b16Convert(chunk3);
-                }
-                catch (int e)
+                if (std::any_of(std::begin(chunk3), std::end(chunk3), ::isalpha))
                 {
                     cout << "ASSEMBLER ERROR: undefined label." <<endl;
                     exit(0);
+                }
+                else
+                {
+                    rBit = b16Convert(chunk3);
                 }
         }
         while (rBit.size() < 3)
@@ -238,14 +238,14 @@ string mConvert(string line) //CONVERTS ASSEMBLY TO MACHINE CODE
         }
         else
         {
-                try
-                {
-                    rBit = b16Convert(chunk4);
-                }
-                catch (int e)
+                if (std::any_of(std::begin(chunk4), std::end(chunk4), ::isalpha))
                 {
                     cout << "ASSEMBLER ERROR: undefined label." <<endl;
                     exit(0);
+                }
+                else
+                {
+                    rBit = b16Convert(chunk4);
                 }
         }
         while (rBit.size() < 3)
